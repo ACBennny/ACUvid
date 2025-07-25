@@ -11,7 +11,7 @@
     font-family: 'Berlin Sans FB';
     font-style: normal;
     font-weight: normal;
-    src: local('Berlin Sans FB'), url('/fonts/BRLNSR.woff') format('woff');
+    src: local('Berlin Sans FB'), url('/fonts/BRLNSR.woff2') format('woff2');
 }
 
 
@@ -20,7 +20,7 @@
     font-family: 'Berlin Sans FB Bold';
     font-style: normal;
     font-weight: bold;
-    src: local('Berlin Sans FB Bold'), url('/fonts/BRLNSB.woff') format('woff');
+    src: local('Berlin Sans FB Bold'), url('/fonts/BRLNSB.woff2') format('woff2');
 }
 
 
