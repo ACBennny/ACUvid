@@ -573,6 +573,9 @@
             backToTopBtn.classList.toggle("float", window.scrollY > 25);
         });
 
+        // Scrolling back to top
+        backToTopBtn.onclick = () => window.scrollTo(0, 0);
+
         // Switching tabs
         navBtns.forEach((btn) => 
         {

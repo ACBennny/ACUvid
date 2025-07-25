@@ -25,6 +25,12 @@
 
 
 
+html
+{
+    scroll-behavior: smooth;
+}
+
+
 html:root
 {
     --genGreenTypeBright: #0ee806;
