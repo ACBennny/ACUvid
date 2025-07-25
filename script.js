@@ -460,7 +460,7 @@
                                                 <div class="app-vrsn-ttl-box">
                                                     <span class="app-vrsn-ttl-txt">${shrt_name}</span>
                                                 </div>
-                                                <button type="button" onclick="window.open('/?v=${v+1}')" class="app-vrsn-atn-box" title="View demo of version ${v+1}">
+                                                <button type="button" onclick="window.open('/?v=${v+1}')" class="app-vrsn-atn-box">
                                                     <div class="app-vrsn-atn-icon">
                                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="app-vrsn-atn-svg">
                                                             <path d="M15.729 3.884c1.434-1.44 3.532-1.47 4.693-.304c1.164 1.168 1.133 3.28-.303 4.72l-2.423 2.433a.75.75 0 0 0 1.062 1.059l2.424-2.433c1.911-1.919 2.151-4.982.303-6.838c-1.85-1.857-4.907-1.615-6.82.304L9.819 7.692c-1.911 1.919-2.151 4.982-.303 6.837a.75.75 0 1 0 1.063-1.058c-1.164-1.168-1.132-3.28.303-4.72z" />

@@ -903,9 +903,49 @@ img
 
 .app-vrsn-hdr-box .app-vrsn-atn-box
 {
+    --app_vrsn_atn_psue_clr: var(--genGreyTypeDark);
+    position: relative;
     width: -moz-fit-content;
     width: fit-content;
     margin-left: 0.5rem;
+}
+
+.app-vrsn-atn-box::before
+{
+    --app_vrsn_atn_b4_bdr_size: 0.3125rem;
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    margin-left: calc((1rem - var(--app_vrsn_atn_b4_bdr_size) + 0.0625rem));
+    border-right: var(--app_vrsn_atn_b4_bdr_size) solid var(--app_vrsn_atn_psue_clr);
+    border-top: var(--app_vrsn_atn_b4_bdr_size) solid #00000000;
+    border-bottom: var(--app_vrsn_atn_b4_bdr_size) solid #00000000;
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(-50%, -50%);
+    transition: all 250ms ease-in-out;
+    pointer-events: none;
+}
+
+.app-vrsn-atn-box::after
+{
+    content: 'View Demo';
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 4rem;
+    margin-left: 1rem;
+    padding: 0.5rem;
+    color: var(--genWhiteTypeLight);
+    font-size: 0.75rem;
+    border-radius: 0.625rem;
+    background-color: var(--app_vrsn_atn_psue_clr);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-50%);
+    transition: all 250ms ease-in-out;
+    pointer-events: none;
 }
 
 .app-vrsn-atn-box .app-vrsn-atn-icon
@@ -1152,6 +1192,20 @@ img
     .app-desc-txt-lnk:hover
     {
         --app_desc_txt_lnk_clr: var(--genGreenTypeBright);
+    }
+
+    .app-vrsn-atn-box:hover::before
+    {
+        opacity: 1;
+        visibility: visible;
+        transform: translate(0%, -50%);
+    }
+
+    .app-vrsn-atn-box:hover::after
+    {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(0%);
     }
 
     .app-vrsn-det-bdr:hover .app-vrsn-atn-icon
