@@ -68,6 +68,7 @@ html:root
     --app_vrsn_pd_l: 1.25rem;
     --app_vrsn_b4_w: 0.125rem;
     --app_vrsn_icon_size: 2.5rem;
+    --app_vrsn_atn_clr:  var(--genGreyTypeMid);
     --app_ctnb_pfp_size: 4rem;
     --app_ctnb_lnk_size: 1.25rem;
 }
@@ -853,7 +854,7 @@ img
     margin-left: calc(((var(--app_vrsn_icon_size) / -2 ) + 0.0625rem));
     margin-right: calc((var(--app_vrsn_icon_size) / 2));
     border-radius: 50%;
-    background-color: var(--genGreyTypeDark);
+    background-color: var(--app_vrsn_atn_clr);
     z-index: 1;
 }
 
@@ -909,7 +910,6 @@ img
 
 .app-vrsn-hdr-box .app-vrsn-atn-box
 {
-    --app_vrsn_atn_psue_clr: var(--genGreyTypeDark);
     position: relative;
     width: -moz-fit-content;
     width: fit-content;
@@ -924,7 +924,7 @@ img
     top: 50%;
     left: 100%;
     margin-left: calc((1rem - var(--app_vrsn_atn_b4_bdr_size) + 0.0625rem));
-    border-right: var(--app_vrsn_atn_b4_bdr_size) solid var(--app_vrsn_atn_psue_clr);
+    border-right: var(--app_vrsn_atn_b4_bdr_size) solid var(--app_vrsn_atn_clr);
     border-top: var(--app_vrsn_atn_b4_bdr_size) solid #00000000;
     border-bottom: var(--app_vrsn_atn_b4_bdr_size) solid #00000000;
     opacity: 0;
@@ -946,7 +946,7 @@ img
     color: var(--genWhiteTypeLight);
     font-size: 0.75rem;
     border-radius: 0.625rem;
-    background-color: var(--app_vrsn_atn_psue_clr);
+    background-color: var(--app_vrsn_atn_clr);
     opacity: 0;
     visibility: hidden;
     transform: translateX(-50%);
