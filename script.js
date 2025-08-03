@@ -285,7 +285,7 @@
         },
         {
             shrt_name: `Version 3`,
-            shrt_prd: `Apr, 2024 - July, 2025`,
+            shrt_prd: `Apr, 2024 - Jul, 2025`,
             shrt_desc: 
             `
                 As my focus completely shifted to streaming apps, 
@@ -518,8 +518,14 @@
                                             <p class="app-vrsn-desc-txt">${shrt_desc}</p>
                                         </div>
                                         <div class="app-vrsn-more-box">
-                                            <button type="button" onclick="window.open('/?g=${v+1}')" class="app-vrsn-more-btn" title="View more details of version ${v+1}">
-                                                <p class="app-vrsn-more-txt">View more details</p>
+                                            <button type="button" onclick="window.open('/?v=${v+1}')" class="app-vrsn-more-btn ld" title="View live demo of version ${v+1}">
+                                                <p class="app-vrsn-more-txt">View Demo</p>
+                                            </button>
+                                            <span class="app-vrsn-more-btn">
+                                                <p class="app-vrsn-more-txt">or</p>
+                                            </span>
+                                            <button type="button" onclick="window.open('/?g=${v+1}')" class="app-vrsn-more-btn gh" title="View more details of version ${v+1}">
+                                                <p class="app-vrsn-more-txt">View GitHub</p>
                                             </button>
                                         </div>
                                     </div>

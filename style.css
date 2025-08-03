@@ -1010,6 +1010,10 @@ img
 .app-vrsn-det-box .app-vrsn-more-box
 {
     width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 0.3125rem;
 }
 
 .app-vrsn-more-box .app-vrsn-more-btn
@@ -1022,10 +1026,22 @@ img
 {
     position: relative;
     color: var(--genWhiteTypeMid);
+    font-size: 0.9375rem;
+}
+
+.app-vrsn-more-btn.ld .app-vrsn-more-txt
+{
+    color: var(--genGreenTypeLight2);
+    font-size: 1.0625rem;
+}
+
+.app-vrsn-more-btn.gh .app-vrsn-more-txt
+{
+    color: var(--genWhiteTypeMid);
     font-size: 1rem;
 }
 
-.app-vrsn-more-txt::after
+.app-vrsn-more-btn .app-vrsn-more-txt::after
 {
     content: '';
     position: absolute;
@@ -1034,8 +1050,17 @@ img
     width: 100%;
     height: .0625rem;
     border-radius: .625rem;
-    background-color: var(--genWhiteTypeMid);
     transition: all 300ms ease-in-out;
+}
+
+.app-vrsn-more-btn.ld .app-vrsn-more-txt::after
+{
+    background-color: var(--genGreenTypeLight2);
+}
+
+.app-vrsn-more-btn.gh .app-vrsn-more-txt::after
+{
+    background-color: var(--genWhiteTypeMid);
 }
 
 
@@ -1305,6 +1330,5 @@ img
         padding: .75rem;
     }
 }
-
 
 
