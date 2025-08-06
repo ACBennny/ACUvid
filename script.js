@@ -300,7 +300,7 @@
     const version_ctnb = 
     [
         {
-            ctnb_name: `ACBennny`,
+            ctnb_name: `ACBennny (Owner)`,
             ctnb_pfp: `/images/pfp-1.jpg`,
             ctnb_link_prsnl: `https://acbennny.netlify.app`,
             ctnb_link_github: `https://github.com/ACBennny`,
