@@ -330,7 +330,6 @@
                 if((vNum != NaN) && (vNum < v_links.length))
                 {
                     window.open(v_links[vNum], '_self');
-                    console.log(`"opened V${v_links[vNum]}"`)
                 }
                 else
                 {
@@ -346,7 +345,6 @@
                 if((gNum != NaN) && (gNum < g_links.length))
                 {
                     window.open(g_links[gNum], '_self');
-                    console.log(`"opened G${gNum} ${g_links[gNum]}"`)
                 }
                 else
                 {
