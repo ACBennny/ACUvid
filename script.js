@@ -75,7 +75,6 @@
             </div>
     `;
 
-
     const abt_text = 
     `
         Hi, thanks for stopping by.
@@ -88,8 +87,8 @@
         the end goal originally being to remake the UI of a flight entertainment system. 
         As time went on, I shifted my focus from flight entertainment systems to streaming services.
         <br><br>
-        You can view the most recent version 
-        <button onclick="window.open('/?v=latest')" class="app-desc-txt-lnk" title="View the latest version of ACUvid">here</button>
+        You can 
+        <button onclick="window.open('/?v=latest')" class="app-desc-txt-lnk" title="View the latest version of ACUvid">view the most recent version here</button>
         or check the "Versions" tab above to see other versions.
         <br><br>
         Star this project on GitHub by clicking 
@@ -242,27 +241,20 @@
         `,
     ];
 
-    const g_links = 
-    [
-        `https://github.com/ACBennny/ACUvid`,
-        `https://github.com/ACBennny/ACUvid-v1#features`,
-        `https://github.com/ACBennny/ACUvid-v2#features`,
-        `https://github.com/ACBennny/Uvidplus#features`,
-    ];
-
     const v_links = 
     [
         `https://github.com/search?q=owner%3AACBennny+acuvid&type=repositories`,
         `https://acuvid-v1.netlify.app`,
         `https://acuvid-v2.netlify.app`,
-        `https://uvidplus.netlify.app`,
+        `https://acuvid-v3.netlify.app`,
+        `https://uvid-lite.netlify.app`,
     ];
 
     const version_shrt = 
     [
         {
             shrt_name: ` Version 1`,
-            shrt_prd: `Sep, 2023 - Dec, 2023`,
+            shrt_prd: `September, 2023`,
             shrt_desc: 
             `
                 This is the first ever version of ACUvid. At this time, 
@@ -271,29 +263,88 @@
                 and improve my knowledge; the end goal being to remake the UI of a 
                 Flight Entertainment System.
             `,
+            shrt_ftrs:
+            [
+                "A start screen with options to select preferred genre.",
+                "Added a static sign up/sign in page.",
+                "A simple homepage with direct navigation to collective hubs for various content (i.e. movies, tv shows, documentaries, etc.).",
+                "Navigation bar containing app's name, slogan, and a collapsible menu.",
+                "A static search bar with search suggestions.",
+                "Settings tab with several customization options.",
+                "Profile tab with customization options.",
+                "Premium tab displaying offers for premium membership.",
+                "My Shows tab to view watchlist, playlists, etc.",
+                "Customer Support tab with custom designed form fields.",
+            ]
         },
         {
             shrt_name: `Version 2`,
-            shrt_prd: `Jan, 2024 - Mar, 2024`,
+            shrt_prd: `January, 2024`,
             shrt_desc: 
             `
                 In this version of ACUvid, I'm shifting from the remaking of a 
-                flight entertainment system to simulating a streaming apps. 
+                flight entertainment system to simulating streaming apps. 
                 This version maintains a similar structure to its predecessor while making 
                 few tweaks and adding new features to resemble that of other streaming apps.
             `,
+            shrt_ftrs:
+            [
+                "Switched font family from 'Berlin Sans FB' to 'Zen Dots'.",
+                "Tweaked the sign up/in page to reduce spacing issues.",
+                "Added a quick summary/preview for each hub before opening.",
+                "Removed the 'Latest' and 'Upcoming' category from homepage.",
+                "Moved all navigation tabs including profiles and settings into a single page for quick navigation.",
+                "Redesigned the search tab and added basic search functionality.",
+                "Added details for the Premium tab.",
+                "Added a contact tab.",
+                "Implemented a structure for the show hubs.",
+                "Renamed 'Customer Support' to 'Help center'.",
+                "Replaced the custom form field in the Help Center with the default text area as the former was overly complex.",
+                "Added a catalog page to view all shows.",
+                "Added page for displaying a show's details.",
+                "Added a watch page with a custom designed player.",
+            ]
         },
         {
             shrt_name: `Version 3`,
-            shrt_prd: `Apr, 2024 - Present`,
+            shrt_prd: `April, 2024`,
             shrt_desc: 
             `
                 As my focus completely shifted to streaming apps, 
                 I realized the old platform just wouldn't cut it. 
                 Hence, I cleared everything and started with a clean slate. 
-                In this version of ACUvid, now Uvidplus (aka Uvid+), I aim to 
+                In this version of ACUvid, I aim to 
                 simulate the user interface and user experience of a modern streaming service.
             `,
+            shrt_ftrs:
+            [
+                "Complete UI overhaul for a sleek modern design.",
+                "Separated all elements of the old navigation into their standalone pages.",
+                "Replaced start screen with a landing page.",
+                "Redesigned and separated the sign up and sign in pages.",
+                "Integrated account setup & management.",
+                "Added multi - profile creation and customization.",
+                "Large content library.",
+                "Refreshed the watch page and player with new perks.",
+                "Watchlists, collections, and watch history are now saved.",
+                "Dedicated help center page with virtual assistant.",
+                "Working feedback form to submit requests, reports, suggestions, etc.",
+                "Schedule page to view releasing shows.",
+            ]
+        },
+        {
+            shrt_name: `Version 4 (In works)`,
+            shrt_prd: `Coming Soon`,
+            shrt_desc: 
+            `
+                Building upon version 3, this version will focus on strengthening the core infrastructure
+                with many improvements to the UX aspects including site optimizations, loading strategies,
+                and better resource management. This version also expands the list of features offered.
+            `,
+            shrt_ftrs:
+            [
+                "Added a minimalistic page that users can access without creating an account.",
+            ]
         },
     ];
 
@@ -301,7 +352,7 @@
     [
         {
             ctnb_name: `ACBennny (Owner)`,
-            ctnb_pfp: `/images/pfp-1.jpg`,
+            ctnb_pfp: `/images/pfp.jpg`,
             ctnb_link_prsnl: `https://acbennny.netlify.app`,
             ctnb_link_github: `https://github.com/ACBennny`,
         },
@@ -335,20 +386,6 @@
                 {
                     // Open the latest version
                     window.open(v_links.at(-1), '_self');
-                }
-            }
-            else
-            {
-                param = params.get("g");
-                let gNum = Number(param);
-
-                if((gNum != NaN) && (gNum < g_links.length))
-                {
-                    window.open(g_links[gNum], '_self');
-                }
-                else
-                {
-                    goApp();
                 }
             }
         }
@@ -467,10 +504,12 @@
                     const {
                         shrt_name, 
                         shrt_prd, 
-                        shrt_desc
+                        shrt_desc,
+                        shrt_ftrs
                     } = version_shrt[v];
                     
-                    versions.innerHTML += `
+                    versions.innerHTML += 
+                    `
                         <div class="app-vrsn-bdr">
                             <div class="app-vrsn-box">
                                 <div class="app-vrsn-icon-bdr">
@@ -484,19 +523,19 @@
                                 <div class="app-vrsn-det-bdr">
                                     <div class="app-vrsn-det-box">
                                         <div class="app-vrsn-hdr-bdr">
-                                            <div class="app-vrsn-hdr-box">
+                                            <button type="button" onclick="window.open('/?v=${v+1}')" class="app-vrsn-hdr-box">
                                                 <div class="app-vrsn-ttl-box">
                                                     <span class="app-vrsn-ttl-txt">${shrt_name}</span>
                                                 </div>
-                                                <button type="button" onclick="window.open('/?v=${v+1}')" class="app-vrsn-atn-box">
+                                                <div class="app-vrsn-atn-box">
                                                     <div class="app-vrsn-atn-icon">
                                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="app-vrsn-atn-svg">
                                                             <path d="M15.729 3.884c1.434-1.44 3.532-1.47 4.693-.304c1.164 1.168 1.133 3.28-.303 4.72l-2.423 2.433a.75.75 0 0 0 1.062 1.059l2.424-2.433c1.911-1.919 2.151-4.982.303-6.838c-1.85-1.857-4.907-1.615-6.82.304L9.819 7.692c-1.911 1.919-2.151 4.982-.303 6.837a.75.75 0 1 0 1.063-1.058c-1.164-1.168-1.132-3.28.303-4.72z" />
                                                             <path d="M14.485 9.47a.75.75 0 0 0-1.063 1.06c1.164 1.168 1.133 3.279-.303 4.72l-4.847 4.866c-1.435 1.44-3.533 1.47-4.694.304c-1.164-1.168-1.132-3.28.303-4.72l2.424-2.433a.75.75 0 0 0-1.063-1.059l-2.424 2.433c-1.911 1.92-2.151 4.982-.303 6.838c1.85 1.858 4.907 1.615 6.82-.304l4.847-4.867c1.911-1.918 2.151-4.982.303-6.837" />
                                                         </svg>
                                                     </div>
-                                                </button>
-                                            </div>
+                                                </div>
+                                            </button>
                                         </div>
                                         <div class="app-vrsn-prd-box">
                                             <p class="app-vrsn-prd-txt">${shrt_prd}</p>
@@ -504,16 +543,9 @@
                                         <div class="app-vrsn-desc-box">
                                             <p class="app-vrsn-desc-txt">${shrt_desc}</p>
                                         </div>
-                                        <div class="app-vrsn-more-box">
-                                            <button type="button" onclick="window.open('/?v=${v+1}')" class="app-vrsn-more-btn ld" title="View live demo of version ${v+1}">
-                                                <p class="app-vrsn-more-txt">View Demo</p>
-                                            </button>
-                                            <span class="app-vrsn-more-btn">
-                                                <p class="app-vrsn-more-txt">or</p>
-                                            </span>
-                                            <button type="button" onclick="window.open('/?g=${v+1}')" class="app-vrsn-more-btn gh" title="View more details of version ${v+1}">
-                                                <p class="app-vrsn-more-txt">View GitHub</p>
-                                            </button>
+                                        <div class="app-vrsn-ftr-box">
+                                            <p class="app-vrsn-ftr-mjr">Features</p>
+                                            ${shrt_ftrs.map((ftr, f) => {return `<p class="app-vrsn-ftr-txt">• ${ftr}</p>`}).join("")}
                                         </div>
                                     </div>
                                 </div>
@@ -632,5 +664,3 @@
             btn.addEventListener("click", switch_atn);
         });
     }
-
-

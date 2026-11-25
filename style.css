@@ -97,6 +97,52 @@ body
 }
 
 
+
+
+
+
+@media(hover: hover)
+{
+
+    .app-nav-btn:hover .app-nav-txt
+    {
+        color: var(--app_nav_btn_sel_clr);
+    }
+
+    .app-desc-txt-lnk:hover
+    {
+        --app_desc_txt_lnk_clr: var(--genGreenTypeBright);
+    }
+
+    .app-vrsn-hdr-box:hover .app-vrsn-ttl-txt
+    {
+        color: var(--genGreenTypeLight);
+    }
+
+    .app-vrsn-hdr-box:hover .app-vrsn-atn-box::before
+    {
+        opacity: 1;
+        visibility: visible;
+        transform: translate(0%, -50%);
+    }
+
+    .app-vrsn-hdr-box:hover .app-vrsn-atn-box::after
+    {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(0%);
+    }
+
+    .app-vrsn-hdr-box:hover .app-vrsn-atn-icon
+    {
+        margin-left: 0.5rem;
+        scale: 1.5;
+        animation: app-vrsn-atn-icon-anm 500ms linear infinite;
+    }
+
+}
+
+
 ::-webkit-scrollbar
 {
     display: block;
@@ -641,7 +687,8 @@ img
 .app-nav-bdr .app-nav-box
 {
     width: 100%;
-    border-radius: .625rem;
+    border-bottom-left-radius: .625rem;
+    border-bottom-right-radius: .625rem;
     backdrop-filter: blur(.15rem);
     background-color: #00000099;
 }
@@ -823,7 +870,6 @@ img
     width: 100%;
     display: flex;
     flex-direction: row;
-    /* justify-content: start; */
     padding: 1.25rem 0;
 }
 
@@ -892,20 +938,24 @@ img
 .app-vrsn-hdr-bdr .app-vrsn-hdr-box
 {
     width: 100%;
+    max-width: fit-content;
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 
 .app-vrsn-hdr-box .app-vrsn-ttl-box
 {
     width: -moz-fit-content;
     width: fit-content;
+    cursor: pointer;
 }
 
 .app-vrsn-ttl-box .app-vrsn-ttl-txt
 {
     color: var(--genWhiteTypeBright);
     font-size: 1.5rem;
+    transition: all 250ms ease-in-out;
 }
 
 .app-vrsn-hdr-box .app-vrsn-atn-box
@@ -1007,41 +1057,25 @@ img
     font-size: 1.0625rem;
 }
 
-.app-vrsn-det-box .app-vrsn-more-box
+.app-vrsn-det-box .app-vrsn-ftr-box
 {
     width: 100%;
     display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-    gap: 0.3125rem;
+    flex-direction: column;
+    margin-bottom: 1.25rem;
 }
 
-.app-vrsn-more-box .app-vrsn-more-btn
-{
-    width: -moz-fit-content;
-    width: fit-content;
-}
-
-.app-vrsn-more-btn .app-vrsn-more-txt
+.app-vrsn-ftr-box .app-vrsn-ftr-mjr
 {
     position: relative;
-    color: var(--genWhiteTypeMid);
-    font-size: 0.9375rem;
-}
-
-.app-vrsn-more-btn.ld .app-vrsn-more-txt
-{
+    width: -moz-fit-content;
+    width: fit-content;
     color: var(--genGreenTypeLight2);
-    font-size: 1.0625rem;
+    font-size: 1.125rem;
+    margin-bottom: 0.5rem;
 }
 
-.app-vrsn-more-btn.gh .app-vrsn-more-txt
-{
-    color: var(--genWhiteTypeMid);
-    font-size: 1rem;
-}
-
-.app-vrsn-more-btn .app-vrsn-more-txt::after
+.app-vrsn-ftr-mjr::after
 {
     content: '';
     position: absolute;
@@ -1050,17 +1084,15 @@ img
     width: 100%;
     height: .0625rem;
     border-radius: .625rem;
+    background-color: var(--genGreenTypeLight2);
     transition: all 300ms ease-in-out;
 }
 
-.app-vrsn-more-btn.ld .app-vrsn-more-txt::after
+.app-vrsn-ftr-box .app-vrsn-ftr-txt
 {
-    background-color: var(--genGreenTypeLight2);
-}
-
-.app-vrsn-more-btn.gh .app-vrsn-more-txt::after
-{
-    background-color: var(--genWhiteTypeMid);
+    color: var(--genWhiteTypeMid2);
+    font-size: 1.0625rem;
+    margin-bottom: 0.125rem;
 }
 
 
@@ -1202,50 +1234,6 @@ img
 .app-ctnb-lnk-box:hover .app-ctnb-svg
 {
     fill: var(--genGreenTypeLight2);
-}
-
-
-
-
-
-
-
-
-
-@media(hover: hover)
-{
-
-    .app-nav-btn:hover .app-nav-txt
-    {
-        color: var(--app_nav_btn_sel_clr);
-    }
-
-    .app-desc-txt-lnk:hover
-    {
-        --app_desc_txt_lnk_clr: var(--genGreenTypeBright);
-    }
-
-    .app-vrsn-atn-box:hover::before
-    {
-        opacity: 1;
-        visibility: visible;
-        transform: translate(0%, -50%);
-    }
-
-    .app-vrsn-atn-box:hover::after
-    {
-        opacity: 1;
-        visibility: visible;
-        transform: translateX(0%);
-    }
-
-    .app-vrsn-det-bdr:hover .app-vrsn-atn-icon
-    {
-        margin-left: 0.5rem;
-        scale: 1.5;
-        animation: app-vrsn-atn-icon-anm 500ms linear infinite;
-    }
-
 }
 
 

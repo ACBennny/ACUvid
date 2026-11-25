@@ -1,0 +1,11 @@
+[[redirects]]
+  from = "https://acuvid.netlify.app/*"
+  to = "https://acuv.abcx.fyi/:splat"
+  status = 301
+  force = true
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Content-Security-Policy = "frame-ancestors 'self'"
+    X-Frame-Options = "SAMEORIGIN"
+    Referrer-Policy = "strict-origin-when-cross-origin"
