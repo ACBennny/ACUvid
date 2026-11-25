@@ -248,6 +248,7 @@
         `https://acuvid-v2.netlify.app`,
         `https://acuvid-v3.netlify.app`,
         `https://uvid-lite.netlify.app`,
+        `https://uvidplus.netlify.app`,
     ];
 
     const version_shrt = 
