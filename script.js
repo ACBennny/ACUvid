@@ -308,7 +308,7 @@
         },
         {
             shrt_name: `Version 3`,
-            shrt_prd: `April, 2024`,
+            shrt_prd: `April, 2025`,
             shrt_desc: 
             `
                 As my focus completely shifted to streaming apps, 
